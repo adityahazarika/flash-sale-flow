@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:3000"  
+  payload:
+    path: 'test.csv'
+    fields:
+      - 'Set1'
+  phases:
+    - duration: 30  # test duration in seconds
+      arrivalRate: 500   # requests per second
+scenarios:
+  - name: "Create Order Test"
+    flow:
+      - post:
+          url: "/order"
+          json:
+            userId: "user{{ $randomNumber(1,1000) }}"
+            items:
+              - productId: '{{ Set1 }}'
+                qty: 1

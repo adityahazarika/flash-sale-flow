@@ -75,6 +75,7 @@ Artillery will automatically read:
 
 ## 📚 Medium Article
 Full explanation, diagrams, and load-test analysis:
+
 https://medium.com/@adityahazarika08/flash-sale-order-processing-using-aws-a-practical-implementation-guide-f60c91d6cbd1
 
 ## 🤝 Contributing

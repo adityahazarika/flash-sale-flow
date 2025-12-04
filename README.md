@@ -36,18 +36,34 @@ This project demonstrates how to handle high-traffic flash-sale scenarios by cap
 ### 1. Install project dependencies
 ```bash
 npm install
+```
 
 ### 2. Install AWS CLI
-- AWS services require authentication before your local machine can access them.
-- After installing aws cli configure it :
-Run
+- AWS services require authentication before your local machine can access them, you will find the instructions here - https://aws.amazon.com/cli/
+- After installing aws-cli, configure it:
 ```bash
 aws configure
+```
 
--Enter:
-AWS Access Key ID
-AWS Secret Access Key
-Default region (example: ap-south-1)
-Output format → json
+Enter:
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region (example: ap-south-1)
+- Output format → json
+
 This stores credentials in ~/.aws/credentials.
 
+### 3. Environment Variables
+Create a .env file in the root directory:
+```
+QUEUE_URL=
+AWS_REGION=
+```
+
+### 4. Running the application
+
+Start the backend server
+```
+node app
+```
+Your server is ready to accept requests

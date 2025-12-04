@@ -15,22 +15,6 @@ This project demonstrates how to handle high-traffic flash-sale scenarios by cap
 
 ---
 
-## 📊 Architecture Overview
-> A detailed diagram is available in the Medium article.  
-> (You can add your architecture PNG here once uploaded.)
-
----
-
-## 🚀 Features
-- Realistic flash-sale order workflow  
-- Atomic inventory reservation (prevents overselling)  
-- Asynchronous processing using SQS  
-- Payment simulation + webhook handler  
-- Scheduled cleanup for stale pending orders  
-- Load testing with 500+ requests/sec  
-
----
-
 ## 🛠 Installation
 
 ### 1. Install project dependencies

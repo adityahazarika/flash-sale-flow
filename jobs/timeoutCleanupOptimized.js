@@ -132,7 +132,7 @@ async function processOrder(order) {
 
 // ---------- main handler ----------
 export const handler = async (event) => {
-  console.log(`🔔 Cleanup Lambda invoked at ${new Date().toISOString()} by: ${JSON.stringify(event?.source ?? event)}`);
+  console.log(`Cleanup Lambda invoked at ${new Date().toISOString()} by: ${JSON.stringify(event?.source ?? event)}`);
 
   const now = new Date();
   const cutoffTime = new Date(now.getTime() - ORDER_TIMEOUT_MINUTES * 60000).toISOString();
@@ -164,11 +164,11 @@ export const handler = async (event) => {
       if (expiredOrders.length >= MAX_ORDERS_PER_RUN) break;
     } while (lastKey);
   } catch (err) {
-    console.error("❌ Scan failed:", err);
+    console.error("Scan failed:", err);
     return { statusCode: 500, body: "ScanFailed" };
   }
 
-  console.log(`⏳ Collected ${expiredOrders.length} expired orders to process (cap=${MAX_ORDERS_PER_RUN})`);
+  console.log(`Collected ${expiredOrders.length} expired orders to process (cap=${MAX_ORDERS_PER_RUN})`);
 
   // Process in batches to control concurrency
   const batches = [];
@@ -209,7 +209,7 @@ export const handler = async (event) => {
     await sleep(200); // 200ms
   }
 
-  console.log(`✅ Cleanup summary: processed=${processedCount} failed=${failedCount} batches=${batchResults.length}`);
+  console.log(`Cleanup summary: processed=${processedCount} failed=${failedCount} batches=${batchResults.length}`);
   return {
     statusCode: 200,
     body: JSON.stringify({ processed: processedCount, failed: failedCount })

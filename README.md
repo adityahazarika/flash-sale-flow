@@ -70,7 +70,7 @@ Artillery will automatically read:
 ```load-test.yml``` 
 → traffic configuration
 
-```test.sv```
+```test.csv```
  → sample payloads
 
 ## 📚 Medium Article

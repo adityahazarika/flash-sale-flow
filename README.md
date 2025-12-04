@@ -67,3 +67,7 @@ Start the backend server
 node app
 ```
 Your server is ready to accept requests
+
+---
+
+## 🧪 Load Testing

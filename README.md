@@ -71,3 +71,29 @@ Your server is ready to accept requests
 ---
 
 ## 🧪 Load Testing
+### 1. Install Artillery
+```
+npm install -g artillery
+```
+
+### 2. Run the load test
+```
+artillery run load-test.yml
+```
+
+Artillery will automatically read:
+
+```load-test.yml``` 
+→ traffic configuration
+
+```test.sv```
+ → sample payloads
+
+## 📚 Medium Article
+Full explanation, diagrams, and load-test analysis:
+
+
+## 🤝 Contributing
+PRs and issues are welcome — this project is evolving as I continue learning and experimenting.
+## ⭐ Support the Project
+If this project helped you, consider starring ⭐ the repository!
